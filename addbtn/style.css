@@ -41,11 +41,8 @@ button {
     margin-top: 20px;
 }
 
-.indicator {
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-    color: red;
+.selectbox{
+    width: 150px;
 }
 
 .disabled{
@@ -64,10 +61,10 @@ table{
 }
 
 table,tr,td{
-    /* border: 1px solid black; */
     text-align: center;
     border-collapse: collapse;
     padding: 10px;
+    width: auto;
 }
 
 table tr:first-child{

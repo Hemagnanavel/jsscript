@@ -29,6 +29,7 @@ function dataPush(count) {
 }
 
 function insertTable(array) {
+    //table.style.display = "block";
     table.style.display = "table";
     let arr = array;
     for (let i = 0; i < arr.length; i++) {
