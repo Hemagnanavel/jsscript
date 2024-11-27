@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Studentformvalidation</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="tablecontainer">
+            <table id="tbl" class="table" border="1">
+                <thead>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Email </th>
+                    <th>DOB</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>class</th>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <h1>Student Information</h1>
+        <div class="formcontainer">
+
+            <form id="form" method="POST" name="sample" >
+                <label class="text">Name:</label>
+                <input class="inputs" type="text" id="fname" name="name" oninput="strings()" value=""><br>
+                <div>
+                    <span id="valname"></span>
+                </div>
+                <label class="text"> Role:</label>
+                <input id="role" class="inputs" oninput="roles()" name="rollno">
+                <div>
+                    <span id="valrole"></span>
+                </div>
+
+                <br>
+                <label class="text">Email :</label>
+                <input id="email" class="inputs" type="email" oninput="emails()" name="email">
+                <div>
+                    <span id="valemail"></span>
+                </div>
+
+                <br>
+                <label class="text"> DOB :</label>
+                <input id="dob" class="inputs" name="dob" oninput="dobs()" onchange="ages()" type="date">
+                <div>
+                    <span id="valdob"></span>
+                </div>
+
+                <br>
+                <label class="text"> Age :<input id="age" class="inputs" name="age" type="number"></label>
+                <br>
+                <label class="text"> Gender :
+                    <input  type="radio" id="male" name="gender" value="Female">Female
+                    <input  type="radio" id="female" name="gender" value="male">Male
+                </label>
+                <br>
+                <label class="text">Class :
+                    <select id="std" class="inputs" name="std" required>
+                        <option class="text" value=" "></option>
+                        <option class="text" value="I">I</option>
+                        <option class="text" value="II">II</option>
+                        <option class="text" value="III">III</option>
+                        <option class="text" value="IV">IV</option>
+                        <option class="text" value="V">V</option>
+                        <option class="text" value="VI">VI</option>
+                        <option class="text" value="VII">VII</option>
+                        <option class="text" value="VIII">VIII</option>
+                        <option class="text" value="IX">IX</option>
+                        <option class="text" value="X">X</option>
+                        <option class="text" value="XI">XI</option>
+                        <option class="text" value="XII">XII</option>
+                    </select>
+                </label>
+                <br>
+               
+                <textarea id="textBox" class="inputs text"  name="textinput"
+                    placeholder="Write about yourself"></textarea>
+                    <p>Word count: <span id="wordCount">0 / 200</span></p>
+            <br>
+
+                <div class="submitsection">
+                    <input type="submit" name="add" onkeypress="isNumber(event)" value="submit"
+                        class="btn btn-success submit ">
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+</body>
+<script src="script.js" type="text/javascript">
+</script>
+
+</html>
