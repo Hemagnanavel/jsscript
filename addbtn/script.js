@@ -91,6 +91,7 @@ function valstate(count) {
     //console.log(validate);
     return validate;
 }
+//add more
 function dynamicForm() {
     addbtn[count].style.display = "none";
     addbtn[count].classList.add("disabled");
