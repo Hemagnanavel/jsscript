@@ -93,7 +93,7 @@ function valstate(count) {
 }
 //add more
 function dynamicForm() {
-    addbtn[count].style.display = "none";
+    //addbtn[count].style.display = "none";
     addbtn[count].classList.add("disabled");
     addbtn[count].removeAttribute("onclick", "dynamicForm()");
     dataPush(count);

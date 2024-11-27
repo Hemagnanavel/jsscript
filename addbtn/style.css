@@ -2,34 +2,25 @@
 body {
    
     font-family: Inter;
-
 }
 
 form{
    text-align: center;
-  
 }
 .container{
     display: flex;
     flex-direction: column;
     text-align: center;
     border: 1px solid#c4c9cc;
-    background-color: #ffe6ff;
-   
-   
+    background-color: #ffe6ff;  
 }
-
-
 label{
     margin-top:20px ;
 }
 .colomn {
     width: 33%;
 }
-
-
 textarea {
-  
     margin-top: 20px;
     margin-bottom: 20px;
     height: 100px;
