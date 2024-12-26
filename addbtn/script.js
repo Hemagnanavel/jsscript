@@ -15,7 +15,6 @@ let str = /^[a-zA-Z\-'#(),"]*$/;
 let dataArray = [];
 let count = 0;
 
-
 function dataPush(count) {
     dataArray.push(fname[count].value);
     dataArray.push(role[count].value);
@@ -44,7 +43,6 @@ function insertTable(array) {
             tr.insertCell(6).innerHTML = `${array[i + 6]}`;
             tr.insertCell(7).innerHTML = `${array[i + 7]}`;
         }
-
     }
 }
 
@@ -54,12 +52,8 @@ form.addEventListener("input", (e) => {
         addbtn[count].classList.remove("disabled");
         addbtn[count].setAttribute("onclick", "dynamicForm()");
         //console.log("click");
-       
-
     }
 })
-
-
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();

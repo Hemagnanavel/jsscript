@@ -1,7 +1,6 @@
 
 body {
    display: inline-block;
-    font-family: Inter;
 }
 
 .style{
@@ -10,7 +9,6 @@ margin-right: 20px;
 }
 .dob{
     width: 170px;
-
 }
 .main{
    margin-top: 100px;
