@@ -1,16 +1,37 @@
 
 body {
-   
+   display: inline-block;
     font-family: Inter;
 }
 
-form{
-   text-align: center;
+.style{
+margin-left: 20px;
+margin-right: 20px;
+}
+.dob{
+    width: 170px;
+
+}
+.main{
+   margin-top: 100px;
+    margin-left: 250px;
+}
+.section1{
+    display: flex;
+    justify-content: space-between;
+}
+.section2{
+    display: flex;
+    justify-content: space-between;
+}
+.section3{
+    display: flex;
+  
 }
 .container{
     display: flex;
-    flex-direction: column;
-    text-align: center;
+    display: inline-block;
+flex-direction: column;
     border: 1px solid#c4c9cc;
     background-color: #ffe6ff;  
 }
@@ -25,6 +46,7 @@ textarea {
     margin-bottom: 20px;
     height: 100px;
     resize: none;
+    margin-left: 50px;
 }
 button {
     border: none;
@@ -42,7 +64,7 @@ button {
 }
 
 .selectbox{
-    width: 150px;
+    width: 170px;
 }
 
 .disabled{
@@ -51,10 +73,13 @@ button {
     background-color: #BDBDBD;
     color: black;
     padding: 12px;
+    margin: 50px;
     border-radius: 8px;
-  
 }
-
+.valid {
+   
+    color: red;
+}
 table{
     width: 100%;
     display: none;
@@ -64,7 +89,7 @@ table,tr,td{
     text-align: center;
     border-collapse: collapse;
     padding: 10px;
-    width: auto;
+
 }
 
 table tr:first-child{

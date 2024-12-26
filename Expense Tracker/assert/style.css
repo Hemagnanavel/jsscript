@@ -1,0 +1,51 @@
+.container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    text-align: center;
+    color: #333;
+}
+form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+form input,
+form select,
+form button {
+    padding: 4px;
+    font-size: 16px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th,
+table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.summary {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.chart {
+    display: flex;
+    margin: 0px;
+    height: 500px;
+    width: auto;
+}
+

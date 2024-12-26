@@ -1,7 +1,7 @@
 let form = document.querySelector("form");
 const fname = document.getElementsByClassName("name");
-const email = document.getElementsByClassName("email");
 const role = document.getElementsByClassName("role");
+const email = document.getElementsByClassName("email");
 const dob = document.getElementsByClassName("dob");
 const age = document.getElementsByClassName("age");
 const selectBox = document.getElementsByClassName("selectbox");
@@ -11,8 +11,7 @@ const addbtn = document.getElementsByClassName("addbtn");
 let details = document.getElementsByClassName("textarea");
 let table = document.querySelector("table");
 let re = /\S+@\S+\.\S+/;
-let reg = /^[a-zA-Z\-'#(),"]*$/;
-let regs = /^[a-zA-Z\-'#(),"]*$/;
+let str = /^[a-zA-Z\-'#(),"]*$/;
 let dataArray = [];
 let count = 0;
 
@@ -105,119 +104,125 @@ function dynamicForm() {
     const newdata = document.createElement('div');
     newdata.className = "container";
     newdata.innerHTML = `
-                <label>Name :
-                    <input type="text" id="name" class="name" oninput="strings()">
-                    <div>
-                        <span class="valname"></span>
+                <div class="container">
+
+                <div class="section1">
+                    <label class="style">Name :
+                        <input type="text" id="name" class="name" oninput="strings(this)">
+                        <p class="valid"> </p>
+                    </label>
+
+                    <label class="style">Role :
+                        <input type="text" id="role" oninput="roles(this)" class="role">
+                        <p class="valid"> </p>
+                    </label>
+                    <label class="style">Email :
+                        <input type="text" class="email" id="email" oninput="emails(this)">
+                        <p class="valid"> </p>
+                    </label>
+                </div>
+                <div class="section2">
+                    <label class="style">DOB :
+                        <input type="date" id="dob" class="dob" oninput="dobs()" onchange="ages()">
+                        <p class="valid"> </p>
+                    </label>
+                    <label class="style">Age :
+                        <input type="number" id="age" class="age">
+
+                    </label>
+                    <label class="style">Class :
+                        <select name="" id="selectbox" class="selectbox">
+                            <option class="text" value=" "></option>
+                            <option class="text" value="I">I</option>
+                            <option class="text" value="II">II</option>
+                            <option class="text" value="III">III</option>
+                            <option class="text" value="IV">IV</option>
+                            <option class="text" value="V">V</option>
+                            <option class="text" value="VI">VI</option>
+                            <option class="text" value="VII">VII</option>
+                            <option class="text" value="VIII">VIII</option>
+                            <option class="text" value="IX">IX</option>
+                            <option class="text" value="X">X</option>
+                            <option class="text" value="XI">XI</option>
+                            <option class="text" value="XII">XII</option>
+                        </select>
+                    </label>
+
+                </div>
+                <div class="section3">
+                    <label class="style">Gender:
+                        <input type="radio" name="gender${count}" id="female" class="female" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender${count}" id="male" class="male" value="male">
+                        <label for="male">Male</label><br>
+
+                    </label>
+                    <label>
+                        <textarea name="" id="textarea" placeholder="Write About Yourself" class="textarea"
+                            oninput="checkDetail(this)"></textarea>
+                        <p class="valid"> </p>
+                    </label>
+
+
+                    <div class="submitact">
+                        <label class="style"><button type="button" class="addbtn disabled">Add</button></label>
                     </div>
-                </label>
-
-                <label>Role :
-                    <input type="text" id="role" oninput="roles()" class="role">
-                    <div>
-                        <span class="valrole"></span>
-                    </div>
-                </label>
-                <label>Email
-                    <input type="text" class="email" id="email" oninput="emails()">
-                    <div>
-                        <span class="valemail"></span>
-                    </div>    
-                </label>
-                <label>DOB :
-                    <input type="date" id="dob" class="dob" oninput="dobs()" onchange="ages()">
-                    <div>
-                        <span class="valdob"></span>
-                    </div>
-                </label>
-                <label>Age :
-                    <input type="number" id="age" class="age">
-
-                </label>
-                <label>Class :
-                    <select name="" id="selectbox" class="selectbox">
-                        <option class="text" value=" "></option>
-                        <option class="text" value="I">I</option>
-                        <option class="text" value="II">II</option>
-                        <option class="text" value="III">III</option>
-                        <option class="text" value="IV">IV</option>
-                        <option class="text" value="V">V</option>
-                        <option class="text" value="VI">VI</option>
-                        <option class="text" value="VII">VII</option>
-                        <option class="text" value="VIII">VIII</option>
-                        <option class="text" value="IX">IX</option>
-                        <option class="text" value="X">X</option>
-                        <option class="text" value="XI">XI</option>
-                        <option class="text" value="XII">XII</option>
-                    </select>
-                </label>
-                <label>Gender:
-                    <input type="radio" name="gender${count}" id="female" class="female" value="female">
-                    <label for="female">Female</label>
-                    <input type="radio" name="gender${count}" id="male" class="male" value="male">
-                    <label for="male">Male</label><br>
-
-                </label>
-                <label>
-                    <textarea name=""  id="textarea" placeholder="Write About Yourself" class="textarea" oninput="checkDetail(this)"></textarea>
-                    <p class="valid"> </p>
-                </label>
-
-            </div>
-            <div class="submitact">
-                <label><button type="button" class="addbtn disabled">Add</button></label>
-            </div>`
+                </div>`
         ;
     container.appendChild(newdata);
 }
 
 //validations 
 //name
-function strings() {
-
-    let valname = document.getElementsByClassName("valname");
-    // console.log(fname[0].value);
-    // console.log(reg,"hjkjh");
-    if (!reg.test(fname[count].value)) {
-        valname[count].textContent = "invalid name";
-        valname[count].style.color = "red";
-        fname[count].style.borderColor = "red";
+function strings(val) {
+    if (!val.value) {
+        val.nextElementSibling.style.display = "block";
+        fname[count].style.borderColor= "red";
+        val.nextElementSibling.innerHTML = "Fill name filed";
+    } else if (!(str.test(val.value))) {
+        val.nextElementSibling.style.display = "block";
+        fname[count].style.borderColor= "black";
+        val.nextElementSibling.innerHTML = "Strings only allow";
     }
     else {
-        valname[count].textContent = "";
-        fname[count].style.borderColor = "black";
-
+        val.nextElementSibling.style.display = "none";
+        fname[count].style.borderColor= "black";
+        val.nextElementSibling.innerHTML = "";
     }
 }
 //role
-function roles() {
 
-    let valrole = document.getElementsByClassName("valrole");
-    if (!regs.test(role[count].value)) {
-        valrole[count].textContent = "invalid name";
-        valrole[count].style.color = "red";
-        role[count].style.borderColor = "red";
+function roles(val) {
+    if (!val.value) {
+        val.nextElementSibling.style.display = "block";
+        role[count].style.borderColor= "red";
+        val.nextElementSibling.innerHTML = "Fill role filed";
+    } else if (!(str.test(val.value))) {
+        val.nextElementSibling.style.display = "block";
+        role[count].style.borderColor= "black";
+        val.nextElementSibling.innerHTML = "Invaild role";
     }
     else {
-        valrole[count].textContent = "";
-        role[count].style.borderColor = "black";
-
+        val.nextElementSibling.style.display = "none";
+        role[count].style.borderColor= "black";
+        val.nextElementSibling.innerHTML = "";
     }
 }
 //email validation
-
-function emails() {
-    // console.log(email[0].value);
-    // console.log(re);
-    let valemail = document.getElementsByClassName("valemail");
-    if (!re.test(email[count].value)) {
-        valemail[count].textContent = "invalid email id";
-        valemail[count].style.color = "red";
-        email[count].style.borderColor = "red";
+function emails(val) {
+    if (!val.value) {
+        val.nextElementSibling.style.display = "block";
+        email[count].style.borderColor= "red";
+        val.nextElementSibling.innerHTML = "Fill email filed";
+    } else if (!(re.test(val.value))) {
+        val.nextElementSibling.style.display = "block";
+        email[count].style.borderColor= "black";
+        val.nextElementSibling.innerHTML = "Invaild email";
     }
     else {
-        valemail[count].textContent = "";
-        email[count].style.borderColor = "black";
+        val.nextElementSibling.style.display = "none";
+        email[count].style.borderColor= "black";
+        val.nextElementSibling.innerHTML = "";
     }
 }
 //dob
@@ -272,15 +277,18 @@ function checkgender(count) {
 function checkDetail(val) {
     if (val.value == "") {
         val.nextElementSibling.style.display = "block";
+        details[count].style.borderColor= "red";
 
     }
     else if (((val.value.length < 10) || (val.value.length > 200))) {
         val.nextElementSibling.style.display = "block";
         val.nextElementSibling.style.color = "red";
+        details[count].style.borderColor= "black";
         val.nextElementSibling.innerHTML = " More than 10 words to less than 200 words";
     }
     else {
         val.nextElementSibling.style.display = "none";
+        details[count].style.borderColor= "black";
         val.nextElementSibling.innerHTML = "";
     }
     // console.log(details.value.length)

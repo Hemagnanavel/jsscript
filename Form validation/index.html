@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login User</title>
+    <link rel="stylesheet" href="assert/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main-container">
+        <div class="headbar">
+            <div class="left">
+                <div>
+                    <img src="assert/codepen_logo.png" alt="logo" width="80px" height="80px">
+                </div>
+                <div >
+                    <div class="follow">
+                        <p class="text">Solugambas</p>
+                        <button class="follow-btn">+ Follow</button>
+                    </div>
+                    <h2 class="text-h">Form Validator</h2>
+                </div>          
+            </div>
+            <div class="right">
+                <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
+                <button class="view-btn">ViewSource Code</button>
+                <button class="signup-btn">Sign Up</button>
+                <button class="login-btn">Log In</button>
+            </div>
+        </div>
+        <div class="register">
+            <h1 class="title">Register With Us</h1>
+            <form action="">
+                <label for="name">Username<br>
+                    <input type="text" name="name" id="name" placeholder="Enter Username" oninput="validateUsername()">
+                    <p  id="username-error"></p>
+                </label>
+                <label for="email">Email<br>
+                    <input type="text" name="email" id="email" placeholder="Enter Email" oninput="validateEmail()">
+                    <p  id="email-error"></p>
+                </label>
+                <label for="password">Password <br>
+                    <input type="password" name="password" id="password" placeholder="Enter Password" oninput="validatePassword()">
+                    <p  id="password-error"></p>
+                </label>
+                <label for="confirm">Confirm Password<br>
+                    <input type="password" name="confirm" id="confirm" placeholder="Enter Password Again" oninput="validateConfirmPassword()">
+                    <p  id="confirm-error"></p>
+                </label>
+                <label for="submit">
+                    <button id="submit" class="submitbtn" type="button" onclick="validatesubmit()">Submit</button>
+                     <p id="valid-submit"></p>  
+                </label>
+            </form>
+        </div>
+    </div>
+    <script src="assert/script.js"></script>
+</body>
+</html>

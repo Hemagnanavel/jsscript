@@ -1,0 +1,91 @@
+.main{
+    display: flex;
+    flex-direction: column;
+ 
+    width: 500px;
+    margin: 50px auto;
+    background-color: #080808;
+    box-shadow: #222222;
+}
+.colud{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin: 50px auto;
+    background-color: #080808;
+    box-shadow: #222222;
+}
+input{
+    height: 30px;
+    color: #556D83;
+    font-size: medium;
+    width: 210px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+}
+.windsection{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.humidity{
+    display: flex;
+}
+.wind{
+    display: flex;
+}
+.fa-water{
+    font-size: 65px;
+    color: white;
+    margin-right: 20px;
+}
+.fa-wind{
+    font-size: 65px;
+    color: white;
+    margin-right: 20px;
+}
+.search-btn{
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    border: none;
+    height: 30px;
+    width: 50px;
+}
+.section-1{
+    display: flex;
+}
+h4{
+    color: white;
+    font-size: larger;
+    margin-top: 0px;
+}
+#humidity-data{
+    color: white;
+    font-size: larger;
+    margin-top: 0px;
+}
+#wind-data{
+    color: white;
+    font-size: larger;
+    margin-top: 0px;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+}
+.date{
+    color: #ffff;
+}
+.degree{
+    color: #ffff;
+    font-size: 35px;
+    margin-top: 0px
+}
+.place{
+    color: #ffff;
+    font-size: 35px;
+    margin-top: 0px;
+}

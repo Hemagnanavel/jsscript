@@ -1,0 +1,123 @@
+.headbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    background-color: #010101;
+}
+
+.register {
+    width: 500px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ebecec;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.title {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+    margin-bottom: 43px;
+}
+
+.valid {
+    color: red;
+}
+
+input {
+    height: 30px;
+    width: 300px;
+}
+
+label {
+    font-size: 20px;
+}
+
+.submitbtn {
+    background-color: #3498db;
+    height: 30px;
+    width: 300px;
+}
+
+.text {
+    color: white;
+    font-size: medium;
+}
+
+.text-h {
+    color: white;
+    margin: 0px;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+
+.right {
+    margin-top: 20px;
+
+    display: block;
+    float: right;
+
+}
+
+.icon-btn {
+    height: 45px;
+    width: 60px;
+    border-radius: 8px;
+    font-size: medium;
+    color: #ffffff;
+    background-color: #444857;
+}
+
+.signup-btn {
+    background-color: #45be64;
+    font-size: medium;
+    border-radius: 8px;
+    height: 45px;
+    width: 100px;
+}
+
+.login-btn {
+    background-color: #444857;
+    border-radius: 8px;
+    margin-right: 20px;
+    font-size: medium;
+    height: 45px;
+    width: 70px;
+    color: #ffffff;
+}
+
+.view-btn {
+    background-color: #444857;
+    border-radius: 8px;
+    font-size: medium;
+    height: 45px;
+    width: 200px;
+    color: #ffffff;
+}
+
+.follow {
+    display: flex;
+}
+
+.follow-btn {
+    margin-top: 14px;
+    margin-left: 15px;
+    height: 26px;
+    width: 92px;
+    background-color: #45be64;
+    font-size: medium;
+    border-radius: 8px;
+}

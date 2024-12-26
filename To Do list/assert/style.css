@@ -1,0 +1,79 @@
+div {
+    width: 20%;
+    margin: auto;
+}
+
+input,
+button {
+
+    display: inline-block;
+}
+
+.allbtn {
+    margin-left: 5px;
+    height: 30px;
+    width: 90px;
+
+}
+
+.Completedbtn {
+    height: 30px;
+    width: 119px;
+}
+
+.pendingbtn {
+    height: 30px;
+    width: 115px;
+}
+
+.add {
+    background-color: green;
+    color: white;
+    height: 30px;
+    width: 28px;
+    border: none;
+}
+
+.row2 {
+    margin-top: 10px;
+    width: 25%;
+    margin-left: 510px;
+}
+
+.box {
+    border: 2px solid gray;
+    height: 30px;
+    margin-left: 516px;
+    width: 328px;
+    text-align: end;
+    margin-top: 10px;
+}
+
+.box1 {
+    border: 2px solid gray;
+    height: 30px;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.text {
+    height: 24px;
+    width: 292px;
+    border: none;
+}
+
+li {
+    display: flex;
+    width: 320px;
+    justify-content: space-between;
+    border: 2px solid gray;
+    list-style: none;
+    margin-left: -65px;
+    padding: 4px;
+    margin-top: 20px;
+    height: 25px;
+}
+
+.inputarea {
+    width: 310px;
+}

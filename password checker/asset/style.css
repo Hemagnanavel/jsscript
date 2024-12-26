@@ -1,0 +1,44 @@
+.main {
+    text-align: center;
+    border: 2px solid #9CC49D;
+    background-color: #9CC49D;
+    width: 500px;
+    margin: 50px auto;
+}
+
+.title {
+    color: #008000;
+}
+
+input {
+    border: none;
+    outline: none;
+    padding: 20px;
+    width: 300px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #eaeff2;
+    color: #3ba62f;
+    font-size: 20px;
+}
+
+.power-container {
+    background-color: #EAEFF2;
+    margin-left: 90px;
+    margin-bottom: 20px;
+    width: 65%;
+    height: 15px;
+    border-radius: 5px;
+}
+
+.power-container #power-point {
+    width: 0%;
+    height: 100%;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.container {
+    width: 70%;
+    background-color: #ddd;
+}

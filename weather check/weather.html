@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Checker</title>
+    <link rel="stylesheet" href="assets/style..css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <div class="colud">
+            <div class="section-1">
+                <input type="text" id="search">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <p id="error-message" class="error"></p>
+            <img src="assets/cloud.png" alt="cloud" height="200px" width="200px">
+            <p class="date"></p>
+            <h3 id="temperature" class="degree"></h3>
+            <h5 id="city-name" class="place"></h5>
+            <p id="weather-description" class="description"></p>
+        </div>
+        <div class="windsection">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <p id="humidity-data"></p>
+                    <h4>Humidity</h4>
+                </div>
+            </div>
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <p id="wind-data"></p>
+                    <h4>Wind Speed</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>

@@ -12,14 +12,14 @@
         <div class="table">
             <table>
                 <tr>
-                    <td>Name</td>
-                    <td>Role</td>
-                    <td>Email</td>
-                    <td>Dob</td>
-                    <td>Age</td>
-                    <td>Gender</td>
-                    <td>Class</td>
-                    <td>Detail</td>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>Email</th>
+                    <th>Dob</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Class</th>
+                    <th>Detail</th>
                 </tr>
             </table>
         </div>
@@ -28,78 +28,77 @@
             <h1>Students Information</h1>
             <div class="container">
 
-                <label>Name :
-                    <input type="text" id="name" class="name" oninput="strings()">
-                    <div>
-                        <span class="valname"></span>
+                <div class="section1">
+                    <label class="style">Name :
+                        <input type="text" id="name" class="name" oninput="strings(this)">
+                        <p class="valid"> </p>
+                    </label>
+
+                    <label class="style">Role :
+                        <input type="text" id="role" oninput="roles(this)" class="role">
+                        <p class="valid"> </p>
+                    </label>
+                    <label class="style">Email :
+                        <input type="text" class="email" id="email" oninput="emails(this)">
+                        <p class="valid"> </p>
+                    </label>
+                </div>
+                <div class="section2">
+                    <label class="style">DOB :
+                        <input type="date" id="dob" class="dob" oninput="dobs()" onchange="ages()">
+                        <p class="valid"> </p>
+                    </label>
+                    <label class="style">Age :
+                        <input type="number" id="age" class="age">
+
+                    </label>
+                    <label class="style">Class :
+                        <select name="" id="selectbox" class="selectbox">
+                            <option class="text" value=" "></option>
+                            <option class="text" value="I">I</option>
+                            <option class="text" value="II">II</option>
+                            <option class="text" value="III">III</option>
+                            <option class="text" value="IV">IV</option>
+                            <option class="text" value="V">V</option>
+                            <option class="text" value="VI">VI</option>
+                            <option class="text" value="VII">VII</option>
+                            <option class="text" value="VIII">VIII</option>
+                            <option class="text" value="IX">IX</option>
+                            <option class="text" value="X">X</option>
+                            <option class="text" value="XI">XI</option>
+                            <option class="text" value="XII">XII</option>
+                        </select>
+                    </label>
+
+                </div>
+                <div class="section3">
+                    <label class="style">Gender:
+                        <input type="radio" name="gender" id="female" class="female" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="male" class="male" value="male">
+                        <label for="male">Male</label><br>
+
+                    </label>
+                    <label>
+                        <textarea name="" id="textarea" placeholder="Write About Yourself" class="textarea"
+                            oninput="checkDetail(this)"></textarea>
+                        <p class="valid"> </p>
+                    </label>
+
+
+                    <div class="submitact">
+                        <label class="style"><button type="button" class="addbtn disabled">Add</button></label>
                     </div>
-                </label>
-
-                <label>Role :
-                    <input type="text" id="role" oninput="roles()" class="role">
-                    <div>
-                        <span class="valrole"></span>
-                    </div>
-                </label>
-                <label>Email
-                    <input type="text" class="email" id="email" oninput="emails()">
-                    <div>
-                        <span class="valemail"></span>
-                    </div>
-                </label>
-                <label>DOB :
-                    <input type="date" id="dob" class="dob" oninput="dobs()" onchange="ages()">
-                    <div>
-                        <span class="valdob"></span>
-                    </div>
-                </label>
-                <label>Age :
-                    <input type="number" id="age" class="age">
-
-                </label>
-                <label>Class :
-                    <select name="" id="selectbox" class="selectbox">
-                        <option class="text" value=" "></option>
-                        <option class="text" value="I">I</option>
-                        <option class="text" value="II">II</option>
-                        <option class="text" value="III">III</option>
-                        <option class="text" value="IV">IV</option>
-                        <option class="text" value="V">V</option>
-                        <option class="text" value="VI">VI</option>
-                        <option class="text" value="VII">VII</option>
-                        <option class="text" value="VIII">VIII</option>
-                        <option class="text" value="IX">IX</option>
-                        <option class="text" value="X">X</option>
-                        <option class="text" value="XI">XI</option>
-                        <option class="text" value="XII">XII</option>
-                    </select>
-                </label>
-                <label>Gender:
-                    <input type="radio" name="gender" id="female" class="female" value="female">
-                    <label for="female">Female</label>
-                    <input type="radio" name="gender" id="male" class="male" value="male">
-                    <label for="male">Male</label><br>
-
-                </label>
-                <label>
-                    <textarea name="" id="textarea" placeholder="Write About Yourself" class="textarea"
-                        oninput="checkDetail(this)"></textarea>
-                    <p class="valid"> </p>
-                </label>
-
-
-                <div class="submitact">
-                    <label><button type="button" class="addbtn disabled">Add</button></label>
                 </div>
                 <div class="addmore">
 
 
                 </div>
-                <div class="submitact">
-                    <label> <button type="submit">submit</button></label>
-                </div>
-        </form>
 
+        </form>
+    </div>
+    <div class="submitact">
+        <label class="style"> <button type="submit">submit</button></label>
     </div>
 </body>
 <script src="script.js"></script>
